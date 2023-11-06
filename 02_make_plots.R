@@ -44,5 +44,5 @@ p2 <- dat %>%
   xlab("Year") + ylab("SE") +
   facet_wrap(~Survey, scale="free")
 
-gridExtra::grid.arrange(p1, p2, nrow=2)
-ggsave("model_comparisons.png")
+p3 <- gridExtra::grid.arrange(p1, p2, nrow=2)
+ggsave(p3, filename="model_comparisons.png", height = 8, width = 8)
